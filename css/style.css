@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* *COMMON CSS START  */
+**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vh;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--fontColor);
+    background-color: var(--bgCOlor);
+}
+:root{
+    --fontColor: #000000 ;
+    --backColor : #ffffff ;
+    --bodyColor : #010511 ;
+    --bgCOlor : #eff3f3 ;
+}
+body.darkMode {
+    --fontColor: #ffffff ;
+    --backColor : #000000 ;
+    --bgCOlor : #020c27;
+    
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+/* *COMMON CSS END  */
+
+/* *NAVBAR START HERE  */
+#nav{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    padding: 20px 20px;
+    background-color: var(--backColor) ;
+    
+}
+#nav .navbarBtn{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 18px;
+    color: var(--backColor);
+    background-color: var(--fontColor);
+}
+/* *NAVBAR END HERE  */
+
+/* *SIDEBARR STAT HERE  */
+.sidebar{
+    background-color:  rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    inset: 0;
+    transition: 350ms;
+}
+.sidebar.active{
+    opacity: 1;
+    visibility: visible;
+}
+.sidebar .menu{
+    background-color: var(--backColor);
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 350ms;
+}
+.sidebar.active .menu{
+    transform: translateX(0%);
+}
+
+.crossBtn {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    background-color: var(--fontColor);
+    color: var(--backColor);
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.sidebarCnt{
+    padding-top: 80px;
+    text-align: center;
+}
+.sidebarCnt ul{
+    padding-left: 0px;
+}
+.sidebarCnt ul li a{
+    color: var(--fontColor);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 0px;
+    display: inline-block;
+}
+/* *SIDEBAR END HERE  */
+
+/* *DARK & LIGHT MODE */
+#nav .wrap{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    text-align: center;
+}
+#nav .dayNightMode h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--fontColor);
+}
+#nav .darkModeBtn{
+    width: 50px;
+    height: 50px;
+    border: none;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    outline: 2px solid wheat;
+    padding: 0;
+}
+#nav .darkModeBtn .moonicon{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 50px;
+    font-size: 20px;
+    color: var(--fontColor);
+    background-color: var(--backColor);
+    transition: 350ms;
+}
+#nav .darkModeBtn .sunicon{
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 50px;
+    font-size: 20px;
+    color : var(--backColor);
+    background-color : var(--fontColor);
+    transition: 350ms;
+    
+}
+body.darkMode .darkModeBtn .sunicon{
+    margin-top: -100%;
+}
+
+/* *DARK & LIGHT MODE END */
+
+/* *FAQ START HERE  */
+/* #faqs{
+    margin-top: 30px ;
+    height: 100px;
+}
+#faqs .faqCnt{
+    background-color: var(--backColor);
+    border: 1px solid var(--fontColor);
+    height: 100px;
+    display: inline-block;
+    position: relative;
+}
+#faqs .faqCnt h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--fontColor);
+    padding-left: 20px;
+}
+#faqs .faqCnt .dropBtn{
+    position: absolute;
+    right: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-right: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    top: 20px;
+    background-color: var(--backColor);
+    color: var(--fontColor);
+}
+#faqs .faqCnt p{
+    padding-left: 20px;
+    padding-right: 40px;
+    opacity: 0;
+    visibility: hidden;
+} */
